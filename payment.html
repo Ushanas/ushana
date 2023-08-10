@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/text.css">
+    <title>Document</title>
+</head>
+
+<body onload="init()">
+    <nav id="navbar" class="navbar">
+        <!-- nav bar -->
+        <div class="nav-content">
+
+            <!-- drawer-btn only shows in small screens -->
+            <div class="drawer-btn sm-d-show" onclick="toggleDrawer()">
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div></div>
+            </div>
+
+            <!-- //title text  -->
+            <div class="nav-title">Buy Tikets</div>
+        </div>
+
+        <!-- //menu items never shows in small screens -->
+        <div class="nav-links sm-d-none">
+            <a class="nav-item" href="index.html">HOME</a>
+            <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+            <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+            <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+            <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+
+        </div>
+
+
+    </nav>
+
+    <!-- this is a drawer is it small screen and click sandwich  toggle this -->
+    <div class="drawer">
+        <a class="nav-item" href="index.html">HOME</a>
+        <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+        <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+        <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+        <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+    </div>
+    
+    <div class="breadcrumb">
+        <span >Tikets > </span>
+        <span >Add-ons > </span>
+        <span>Details > </span>
+        <span>Additional Details > </span>
+        <span class="active">Payment > </span>
+        <span>Confirm > </span>
+ 
+     </div>
+
+
+    <!-- banner -->
+    <div class="turtle-hatchery-banner-img">
+        <img src="./assets/banners/TURTLEHATCHERYSRILANKA_large.png" style="height: 700px; width: 100%;" class="col-12"
+            alt="" srcset="">
+    </div>
+
+    <div class="row " style="justify-content: space-around;">
+        <form action="">
+            <div class="card-border">
+                <div class="card" style="width: 600px;">
+                    <span style="text-align: center; font-weight: 900; margin-bottom: 20px;">Enter Your Payment Details</span>
+    
+    
+                    <div class="row">
+                        <div style="display: flex; flex-direction:column; width: 100%;">
+                            <span class="input-title">Card Number</span>
+                            <input type="text" class="card-input" name="" id="cardNumberInput" pattern="[0-9]{13,19}" required onchange="cardNumberInputOnChange()" placeholder="XXXX XXXX XXXX XXXX"
+                                onkeyup="cardNumberInputOnChange()">
+                            <span class="input-warning" style="margin-top: -20px;" id="cardNumberError"></span>
+                            <span class="input-success" id="cardNumberMsg"></span>
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                            <span class="input-title">Expriy date</span>
+                            <input type="text" class="card-input" name="" id="expInput" onchange="ExpInputOnChange()"  placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/([0-9]{2})" required
+                                onkeyup="ExpInputOnChange()">
+                            <span class="input-warning" id="expInputError" style="margin-top: -20px;"></span>
+                            <span class="input-success" id="expInputMsg"></span>
+                        </div>
+    
+                        <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                            <span class="input-title">CVC/CVV</span>
+                            <input type="text" class="card-input" name="" id="cvcInput" onchange="CVCInputOnChange()" placeholder="xxx" pattern="[0-9]{3,4}" required
+                                onkeyup="CVCInputOnChange()">
+                            <span class="input-warning" id="cvcError" style="margin-top: -20px;"></span>
+                            <span class="input-success" id="cvcMsg"></span>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div style="display: flex; flex-direction:column; width: 100%; margin-top: 20px;">
+                        <span class="input-title">Name On Card</span>
+                        <input type="text" placeholder="john doe" class="card-input" name="" id="NameInput" onchange="nameInputOnchange()"
+                            onkeyup="nameInputOnchange()">
+                        <span class="input-warning" style="margin-top: -20px;" id="NameError"></span>
+                        <span class="input-success" id="NameMsg"></span>
+    
+                    </div>
+    
+                    <div class="" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="btn deactive-btn" id="paybtn" onclick="submitData()">
+                            pay (0$)
+                        </div>
+                    </div>
+    
+    
+                </div>
+    
+    
+            </div>
+        </form>
+        
+        <div class="card-border">
+            <div class="card" style="width: 500px;">
+                <table>
+                    <table border="1px" id="tableBody">
+
+                        <tr>
+                            <td>Name</td>
+                            <td id="tableName">Not selected yet</td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td id="tableDate">Not selected yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>Time</td>
+                            <td id="tableTime">Not selected yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>Duration</td>
+                            <td id="tableTimeDuration">-</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td id="tableMobile">-</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td id="tableEmail">-</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td id="tableGender">-</td>
+                        </tr>
+
+                    </table>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="height: 700px;"></div>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/payment.js"></script>
+    <script src="./js/constData.js"></script>
+</body>
+
+</html>

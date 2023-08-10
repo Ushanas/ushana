@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/text.css">
+</head>
+
+<body onload="init()">
+
+    <nav id="navbar" class="navbar">
+        <!-- nav bar -->
+        <div class="nav-content">
+
+            <!-- drawer-btn only shows in small screens -->
+            <div class="drawer-btn sm-d-show" onclick="toggleDrawer()">
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div></div>
+            </div>
+
+            <!-- //title text  -->
+            <div class="nav-title">Buy Tikets</div>
+        </div>
+
+        <!-- //menu items never shows in small screens -->
+        <div class="nav-links sm-d-none">
+            <a class="nav-item" href="index.html">HOME</a>
+            <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+            <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+            <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+            <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+
+        </div>
+
+
+    </nav>
+
+    <!-- this is a drawer is it small screen and click sandwich  toggle this -->
+    <div class="drawer">
+        <a class="nav-item" href="index.html">HOME</a>
+        <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+        <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+        <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+        <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+    </div>
+    
+    <div class="breadcrumb">
+        <span >Tikets > </span>
+        <span >Add-ons > </span>
+        <span>Details > </span>
+        <span>Additional Details > </span>
+        <span >Payment > </span>
+        <span class="active">Confirm > </span>
+ 
+     </div>
+
+
+    <!-- banner -->
+    <div class="turtle-hatchery-banner-img">
+        <img src="./assets/banners/TURTLEHATCHERYSRILANKA_large.png" style="height: 700px; width: 100%;" class="col-12"
+            alt="" srcset="">
+    </div>
+
+    <div class="row h1" style="justify-content: center; align-items: center;">
+        Confirmation
+    </div>
+    <div class="row h2" style="justify-content: center; text-align: center; padding: 25px; color: blue;">
+        Thank you for your order. Your order has been confirmed with us. You can show this
+        confirmation at the entrance. Following is the summary of your order.
+
+    </div>
+    <div class="row" style="display: flex; justify-content: center;">
+    <div class="card-border" >
+        <div class="card" style="width: 500px;">
+            <table>
+                <table border="1px" id="tableBody">
+
+                    <tr>
+                        <td>Name</td>
+                        <td id="tableName">Not selected yet</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td id="tableDate">Not selected yet</td>
+                    </tr>
+
+                    <tr>
+                        <td>Time</td>
+                        <td id="tableTime">Not selected yet</td>
+                    </tr>
+
+                    <tr>
+                        <td>Duration</td>
+                        <td id="tableTimeDuration">-</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td id="tableMobile">-</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td id="tableEmail">-</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td id="tableGender">-</td>
+                    </tr>
+
+                </table>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <div style="height: 700px;"></div>
+
+    <script src="./js/confirm.js"></script>
+
+</body>
+
+
+</html>

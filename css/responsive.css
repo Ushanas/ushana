@@ -1,0 +1,65 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  /* Large screens - hide on lg and up */
+.lg-d-none {
+    display: none;
+  }
+  
+  /* Medium screens - hide on md and up */
+  @media (max-width: 991.98px) {
+    .md-d-none {
+      display: none;
+    }
+  }
+  
+  /* Small screens - hide on sm and up */
+  @media (max-width: 767.98px) {
+    .sm-d-none {
+      display: none;
+    }
+  }
+  
+
+  /* Large screens - show on lg and up */
+.lg-d-show {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .lg-d-show {
+    display: block;
+  }
+}
+
+/* Medium screens - show on md and up */
+.md-d-show {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .md-d-show {
+    display: block;
+  }
+}
+
+/* Small screens - show on sm and up */
+.sm-d-show {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .sm-d-show {
+    display: block;
+  }
+}
+
+
+.w-2{
+  width: 50%;
+}
+.w-1{
+  width: 100%;
+}

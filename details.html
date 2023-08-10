@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</head>
+
+<body onload="init()">
+  
+    <nav id="navbar" class="navbar">
+        <!-- nav bar -->
+        <div class="nav-content">
+
+            <!-- drawer-btn only shows in small screens -->
+            <div class="drawer-btn sm-d-show" onclick="toggleDrawer()">
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div></div>
+            </div>
+
+            <!-- //title text  -->
+            <div class="nav-title">Buy Tikets</div>
+        </div>
+
+        <!-- //menu items never shows in small screens -->
+        <div class="nav-links sm-d-none">
+            <a class="nav-item" href="index.html">HOME</a>
+            <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+            <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+            <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+            <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+
+        </div>
+
+
+    </nav>
+
+    <!-- this is a drawer is it small screen and click sandwich  toggle this -->
+    <div class="drawer">
+        <a class="nav-item" href="index.html">HOME</a>
+        <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+        <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+        <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+        <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+    </div>
+    
+    <div class="breadcrumb">
+        <span >Tikets > </span>
+        <span >Add-ons > </span>
+        <span class="active">Details > </span>
+        <span>Additional Details > </span>
+        <span>Payment > </span>
+        <span>Confirm > </span>
+ 
+     </div>
+
+    <!-- banner -->
+    <div class="turtle-hatchery-banner-img">
+        <img src="./assets/banners/TURTLEHATCHERYSRILANKA_large.png" style="height: 700px; width: 100%;" class="col-12"
+            alt="" srcset="">
+    </div>
+
+    <div class="row " style="justify-content: space-around;">
+        <div class="card-border">
+            <div class="card" style="width: 600px;">
+                <span style="text-align: center; font-weight: 900; margin-bottom: 20px;">Enter your details</span>
+
+
+                <div class="row">
+                    <div style="display: flex; flex-direction:column;">
+                        <span class="input-title">Full Name</span>
+                        <span class="input-subtitle">Same as your ID</span>
+                        <input type="text" class="card-input" name="" id="fullNameInput" onchange="fullNameOnchange()"
+                            onkeyup="fullNameOnchange()">
+                        <span class="input-warning" style="margin-top: -20px;" id="fullNameError"></span>
+                        <span class="input-success" id="fullNameMsg"></span>
+
+                    </div>
+
+                    <div style="display: flex; flex-direction:column;">
+                        <span class="input-title">Mobile Number</span>
+                        <span class="input-subtitle" style="margin-bottom: 10px;">Just to ensure we've got this
+                            right</span>
+                        <input id="phone" type="tel" class="card-input" name="phone" onchange="phoneOnChange()"
+                            onkeyup="phoneOnChange()" />
+                        <span class="input-warning" id="phoneError"></span>
+                        <span class="input-success" id="phoneMsg"></span>
+                        <!-- <span class="input-warning" style="margin-top: -20px;">add valid Phone number</span> -->
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                        <span class="input-title">Email</span>
+                        <span class="input-subtitle">We will send your tickets here </span>
+                        <input type="text" class="card-input" name="" id="inputEmail" onchange="emailOnchange()"
+                            onkeyup="emailOnchange()">
+                        <span class="input-warning" id="emailError" style="margin-top: -20px;"></span>
+                        <span class="input-success" id="emailMsg"></span>
+                    </div>
+
+                    <div style="display: flex; flex-direction:column; margin-top: 20px;">
+                        <span class="input-title">Confirm Email</span>
+                        <span class="input-subtitle">Just to ensure we've got this right</span>
+                        <input type="text" class="card-input" name="" id="retypeEmail" onchange="emailOnchange()"
+                            onkeyup="emailOnchange()">
+                        <span class="input-warning" id="RemailError" style="margin-top: -20px;"></span>
+                        <span class="input-success" id="RemailMsg"></span>
+
+                    </div>
+
+                </div>
+
+                <div class="row " style="margin-top:10px">
+                    <div style="display: flex;flex-direction: column;">
+                        <span class="input-title">Gender</span>
+                        <div class="row" style="padding-left: 50px;">
+                            <input type="radio" name="genderInput" id="genderInput_male" value="male" checked>
+                            <label for="genderInput_male">male</label>
+                            <input style="margin-left: 50px;" type="radio" name="genderInput" id="genderInput_female" value="female">
+                            <label for="genderInput_female">female</label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="btn deactive-btn" id="continueBtn" onclick="purchase()">
+                        Continue with purchase
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="card-border">
+            <div class="card" style="width: 500px;">
+                <table>
+                    <table border="1px" id="tableBody">
+
+                        <tr>
+                            <td>Date</td>
+                            <td id="tableDate">Not selected yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>Time</td>
+                            <td id="tableTime">Not selected yet</td>
+                        </tr>
+
+                        <tr>
+                            <td>Duration</td>
+                            <td id="tableTimeDuration">-</td>
+                        </tr>
+
+                    </table>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="height: 4000px;"></div>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/detailsPage.js"></script>
+    <script src="./js/constData.js"></script>
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+    </script>
+</body>
+
+</html>

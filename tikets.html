@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/text.css">
+</head>
+
+<body onload="loadComponents()">
+    <nav id="navbar" class="navbar">
+        <!-- nav bar -->
+        <div class="nav-content">
+
+            <!-- drawer-btn only shows in small screens -->
+            <div class="drawer-btn sm-d-show" onclick="toggleDrawer()">
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div class="btnicon"></div>
+                <div></div>
+            </div>
+
+            <!-- //title text  -->
+            <div class="nav-title">Buy Tikets</div>
+        </div>
+
+        <!-- //menu items never shows in small screens -->
+        <div class="nav-links sm-d-none">
+            <a class="nav-item" href="index.html">HOME</a>
+            <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+            <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+            <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+            <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+
+        </div>
+
+
+    </nav>
+
+    <!-- this is a drawer is it small screen and click sandwich  toggle this -->
+    <div class="drawer">
+        <a class="nav-item" href="index.html">HOME</a>
+        <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
+        <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
+        <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+        <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
+    </div>
+
+    <div class="breadcrumb">
+       <span class="active">Tikets > </span>
+       <span>Add-ons > </span>
+       <span>Details > </span>
+       <span>Additional Details > </span>
+       <span>Payment > </span>
+       <span>Confirm > </span>
+
+    </div>
+
+
+    <!-- banner -->
+    <div class="turtle-hatchery-banner-img">
+        <img src="./assets/banners/TURTLEHATCHERYSRILANKA_large.png" style="height: 700px; width: 100%;" class="col-12"
+            alt="" srcset="">
+    </div>
+
+    <div class="row" id="card">
+        <div class="card-border">
+            <div class="card">
+                <span>When You Are coming?</span>
+                <input class="card-input" type="date" name="" id="input-date" onchange="selectDate()">
+
+                <span>Duration</span>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+
+                    <div id="">
+                        <select name="" id="from-time-option-comp" class="card-input" onchange="selectTime()">
+                            <option value="0">Select From Time</option>
+
+                        </select>
+                    </div>
+                    <div id="">
+                        <select name="" id="to-time-option-comp" class="card-input" onchange="selectTime()">
+                            <option value="0">Select To Time</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div id="increment-selector-card">
+                    Guests
+                    <!-- <div class="increment-selector">
+                        <div class="increment-selector-title">
+                            <span>title</span>
+                            <span class="sub-title">subTitle</span>
+                        </div>
+
+                        <div class="increment-selector-btn-row">
+                            <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','-')">-</div>
+                            <div id="title+id">5</div>
+                            <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','+')">+</div>
+
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+        <div class="card-border">
+            <div class="card">
+                <span>summry</span>
+                <table border="1px" id="tableBody">
+
+                    <tr>
+                        <td>Date</td>
+                        <td id="tableDate">Not selected yet</td>
+                    </tr>
+
+                    <tr>
+                        <td>Time</td>
+                        <td id="tableTime">Not selected yet</td>
+                    </tr>
+
+                    <tr>
+                        <td>Duration</td>
+                        <td id="tableTimeDuration">-</td>
+                    </tr>
+
+                    <tr>
+                        <th>Tickets</th>
+                        <th>Charges</th>
+                    </tr>
+
+
+
+                </table>
+            </div>
+
+            <div class="" style="display: flex; justify-content: center; align-items: center;">
+                <div class="btn deactive-btn" id="continue-btn" onclick="submitData()">
+                    Continue with purchase
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div style="height: 4000px;"></div>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/tiketPage.js"></script>
+    <script src="./js/constData.js"></script>
+</body>
+
+</html>
