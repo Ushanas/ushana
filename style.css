@@ -5,11 +5,16 @@
   font-family: 'Poppins', sans-serif;
 }
 #mainNav {
+  margin-left: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #488A99;
+}
+.logo{
+  width: 25pt;
+  height: auto;
 }
 
 
@@ -76,6 +81,6 @@ p {
 footer {
   text-align: center;
   padding: 3px;
-  background-color: #334542;
+  background-color: #778899;
   color: white;
 }

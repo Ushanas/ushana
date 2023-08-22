@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/text.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
 
 </head>
 
 <body onload="init()">
+    <a><center> <img src="images/logo.jpg" style="height: auto; width: 60pt;"></center></a>
   
     <nav id="navbar" class="navbar">
         <!-- nav bar -->
@@ -70,112 +74,131 @@
             alt="" srcset="">
     </div>
 
-    <div class="row " style="justify-content: space-around;">
-        <div class="card-border">
-            <div class="card" style="width: 600px;">
-                <span style="text-align: center; font-weight: 900; margin-bottom: 20px;">Enter your details</span>
-
-
-                <div class="row">
-                    <div style="display: flex; flex-direction:column;">
-                        <span class="input-title">Full Name</span>
-                        <span class="input-subtitle">Same as your ID</span>
-                        <input type="text" class="card-input" name="" id="fullNameInput" onchange="fullNameOnchange()"
-                            onkeyup="fullNameOnchange()">
-                        <span class="input-warning" style="margin-top: -20px;" id="fullNameError"></span>
-                        <span class="input-success" id="fullNameMsg"></span>
-
+    <div class="col-12 mt-5">
+        <div class="row " style="justify-content: space-around; margin-bottom: 500px;">
+            <div class="col-lg-6">
+                <div class="card" >
+                    <span style="text-align: center; font-weight: 900; margin-bottom: 20px;">Enter your details</span>
+    
+    
+                    <div class="row mx-5">
+                        <div style="display: flex; flex-direction:column;">
+                            <span class="input-title">Full Name</span>
+                            <span class="input-subtitle">Same as your ID</span>
+                            <input type="text" class="card-input" name="" id="fullNameInput" onchange="fullNameOnchange()"
+                                onkeyup="fullNameOnchange()">
+                            <span class="input-warning" style="margin-top: -20px;" id="fullNameError"></span>
+                            <span class="input-success" id="fullNameMsg"></span>
+    
+                        </div>
+    
+                        <div style="display: flex; flex-direction:column;" class="offset-lg-1">
+                            <span class="input-title">Mobile Number</span>
+                            <span class="input-subtitle" style="margin-bottom: 10px;">Just to ensure we've got this
+                                right</span>
+                            <input id="phone" type="tel" class="card-input mx-5" name="phone" onchange="phoneOnChange()"
+                                onkeyup="phoneOnChange()" />
+                            <span class="input-warning" id="phoneError"></span>
+                            <span class="input-success" id="phoneMsg"></span>
+                            <!-- <span class="input-warning" style="margin-top: -20px;">add valid Phone number</span> -->
+                        </div>
+    
                     </div>
-
-                    <div style="display: flex; flex-direction:column;">
-                        <span class="input-title">Mobile Number</span>
-                        <span class="input-subtitle" style="margin-bottom: 10px;">Just to ensure we've got this
-                            right</span>
-                        <input id="phone" type="tel" class="card-input" name="phone" onchange="phoneOnChange()"
-                            onkeyup="phoneOnChange()" />
-                        <span class="input-warning" id="phoneError"></span>
-                        <span class="input-success" id="phoneMsg"></span>
-                        <!-- <span class="input-warning" style="margin-top: -20px;">add valid Phone number</span> -->
+                    <div class="row mt-3 mx-5">
+                        <div style="display: flex; flex-direction: column; ">
+                            <span class="input-title">Email</span>
+                            <span class="input-subtitle">We will send your tickets here </span>
+                            <input type="text" class="card-input" name="" id="inputEmail" onchange="emailOnchange()"
+                                onkeyup="emailOnchange()">
+                            <span class="input-warning" id="emailError" style="margin-top: -20px;"></span>
+                            <span class="input-success" id="emailMsg"></span>
+                        </div>
+    
+                        <div style="display: flex; flex-direction:column;" class="offset-lg-1">
+                            <span class="input-title">Confirm Email</span>
+                            <span class="input-subtitle">Just to ensure we've got this right</span>
+                            <input type="text" class="card-input" name="" id="retypeEmail" onchange="emailOnchange()"
+                                onkeyup="emailOnchange()">
+                            <span class="input-warning" id="RemailError" style="margin-top: -20px;"></span>
+                            <span class="input-success" id="RemailMsg"></span>
+                        </div>
+    
                     </div>
-
-                </div>
-                <div class="row">
-                    <div style="display: flex; flex-direction:column; margin-top: 20px;">
-                        <span class="input-title">Email</span>
-                        <span class="input-subtitle">We will send your tickets here </span>
-                        <input type="text" class="card-input" name="" id="inputEmail" onchange="emailOnchange()"
-                            onkeyup="emailOnchange()">
-                        <span class="input-warning" id="emailError" style="margin-top: -20px;"></span>
-                        <span class="input-success" id="emailMsg"></span>
+    
+                    <div class="row mx-5" style="margin-top:10px">
+                        <div style="display: flex;flex-direction: column;">
+                            <span class="input-title">Gender</span>
+                            <div class="row" style="padding-left: 50px;">
+                                <input type="radio" name="genderInput" id="genderInput_male" value="male" checked>
+                                <label for="genderInput_male">male</label>
+                                <input style="margin-left: 50px;" type="radio" name="genderInput" id="genderInput_female" value="female">
+                                <label for="genderInput_female">female</label>
+                            </div>
+                        </div>
+    
                     </div>
-
-                    <div style="display: flex; flex-direction:column; margin-top: 20px;">
-                        <span class="input-title">Confirm Email</span>
-                        <span class="input-subtitle">Just to ensure we've got this right</span>
-                        <input type="text" class="card-input" name="" id="retypeEmail" onchange="emailOnchange()"
-                            onkeyup="emailOnchange()">
-                        <span class="input-warning" id="RemailError" style="margin-top: -20px;"></span>
-                        <span class="input-success" id="RemailMsg"></span>
-
-                    </div>
-
-                </div>
-
-                <div class="row " style="margin-top:10px">
-                    <div style="display: flex;flex-direction: column;">
-                        <span class="input-title">Gender</span>
-                        <div class="row" style="padding-left: 50px;">
-                            <input type="radio" name="genderInput" id="genderInput_male" value="male" checked>
-                            <label for="genderInput_male">male</label>
-                            <input style="margin-left: 50px;" type="radio" name="genderInput" id="genderInput_female" value="female">
-                            <label for="genderInput_female">female</label>
+    
+    
+    
+                    <div class="" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="btn deactive-btn" id="continueBtn" onclick="purchase()">
+                            Continue with purchase
                         </div>
                     </div>
-
+    
+    
                 </div>
-
-
-
-                <div class="" style="display: flex; justify-content: center; align-items: center;">
-                    <div class="btn deactive-btn" id="continueBtn" onclick="purchase()">
-                        Continue with purchase
-                    </div>
-                </div>
-
-
+    
+    
             </div>
-
-
-        </div>
-        <div class="card-border">
-            <div class="card" style="width: 500px;">
-                <table>
-                    <table border="1px" id="tableBody">
-
-                        <tr>
-                            <td>Date</td>
-                            <td id="tableDate">Not selected yet</td>
-                        </tr>
-
-                        <tr>
-                            <td>Time</td>
-                            <td id="tableTime">Not selected yet</td>
-                        </tr>
-
-                        <tr>
-                            <td>Duration</td>
-                            <td id="tableTimeDuration">-</td>
-                        </tr>
-
+            <div class="col-lg-4 mt-lg-0 mt-4">
+                <div class="card" style="width: 500px;">
+                    <table>
+                        <table border="1px" id="tableBody">
+    
+                            <tr>
+                                <td>Date</td>
+                                <td id="tableDate">Not selected yet</td>
+                            </tr>
+    
+                            <tr>
+                                <td>Time</td>
+                                <td id="tableTime">Not selected yet</td>
+                            </tr>
+    
+                            <tr>
+                                <td>Duration</td>
+                                <td id="tableTimeDuration">-</td>
+                            </tr>
+    
+                        </table>
                     </table>
-                </table>
+                </div>
             </div>
         </div>
+    
     </div>
 
 
 
-    <div style="height: 4000px;"></div>
+
+  <footer>
+        <div>
+            <span>TURTLE SRI LANKA<br> </span>
+        </div>
+       <div class="text-right mt-2" style="margin-right: 20px;">
+          <p> Address: No. 25, Ahana Road, Hikkaduwa, Sri Lanka</p>
+       </div>
+       <div class="text-left mx-5">
+         <p> Get in touch with us: </p>
+         <p>  Contact us: 077-1234567  </p>
+         <p>   Email us: turtlesrilanka@gmail.com     </p><br>
+       </div>
+      <div>
+        <img src="images/logo.jpg" style="height: auto; width: 60pt;"> 
+      </div>
+  </footer>
+
     <script src="./js/navbar.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/detailsPage.js"></script>

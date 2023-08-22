@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 
 <body onload="loadComponents()">
+    <a><center> <img src="images/logo.jpg" style="height: auto; width: 60pt;"></center></a>
     <nav id="navbar" class="navbar">
         <!-- nav bar -->
         <div class="nav-content">
@@ -25,7 +29,7 @@
             </div>
 
             <!-- //title text  -->
-            <div class="nav-title">Buy Tikets</div>
+            <div class="nav-title">Buy Tickets</div>
         </div>
 
         <!-- //menu items never shows in small screens -->
@@ -33,7 +37,7 @@
             <a class="nav-item" href="index.html">HOME</a>
             <a class="nav-item" href="h2.html">TURTLE CATERGORIES</a>
             <a class="nav-item" href="h3.html">TURTLE HATCHERIES</a>
-            <a class="nav-item" href="h4.html">TURTLE TI TURTLE</a>
+            <a class="nav-item" href="h4.html">THREATS TO TURTLE</a>
             <a class="nav-item" href="h5.html">PURCHASE AND DONATE</a>
 
         </div>
@@ -67,95 +71,114 @@
             alt="" srcset="">
     </div>
 
-    <div class="row" id="card">
-        <div class="card-border">
-            <div class="card">
-                <span>When You Are coming?</span>
-                <input class="card-input" type="date" name="" id="input-date" onchange="selectDate()">
-
-                <span>Duration</span>
-                <div style="display: flex; flex-direction: row; justify-content: space-around;">
-
-                    <div id="">
-                        <select name="" id="from-time-option-comp" class="card-input" onchange="selectTime()">
-                            <option value="0">Select From Time</option>
-
-                        </select>
+    <div class="col-12 mt-5" style="margin-bottom: 500px;">
+        <div class="row" id="card">
+            <div class="col-lg-6 mx-3">
+                <div class="card">
+                    <span>When You Are coming?</span>
+                    <input class="card-input" type="date" name="" id="input-date" onchange="selectDate()">
+    
+                    <span>Duration</span>
+                    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+    
+                        <div id="">
+                            <select name="" id="from-time-option-comp" class="card-input" onchange="selectTime()">
+                                <option value="0">Select From Time</option>
+    
+                            </select>
+                        </div>
+                        <div id="">
+                            <select name="" id="to-time-option-comp" class="card-input" onchange="selectTime()">
+                                <option value="0">Select To Time</option>
+                            </select>
+                        </div>
                     </div>
-                    <div id="">
-                        <select name="" id="to-time-option-comp" class="card-input" onchange="selectTime()">
-                            <option value="0">Select To Time</option>
-                        </select>
+    
+    
+                    <div id="increment-selector-card">
+                        Guests
+                        <!-- <div class="increment-selector">
+                            <div class="increment-selector-title">
+                                <span>title</span>
+                                <span class="sub-title">subTitle</span>
+                            </div>
+    
+                            <div class="increment-selector-btn-row">
+                                <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','-')">-</div>
+                                <div id="title+id">5</div>
+                                <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','+')">+</div>
+    
+                            </div>
+                        </div> -->
+    
+    
                     </div>
                 </div>
-
-
-                <div id="increment-selector-card">
-                    Guests
-                    <!-- <div class="increment-selector">
-                        <div class="increment-selector-title">
-                            <span>title</span>
-                            <span class="sub-title">subTitle</span>
-                        </div>
-
-                        <div class="increment-selector-btn-row">
-                            <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','-')">-</div>
-                            <div id="title+id">5</div>
-                            <div class="increment-selector-btn" onclick="incrementSelectorBtn('title+id','+')">+</div>
-
-                        </div>
-                    </div> -->
-
-
+            </div>
+            <div class="col-lg-4 mx-3 mt-5 mt-lg-0">
+                <div class="card">
+                    <span>summry</span>
+                    <table border="1px" id="tableBody">
+    
+                        <tr>
+                            <td>Date</td>
+                            <td id="tableDate">Not selected yet</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Time</td>
+                            <td id="tableTime">Not selected yet</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Duration</td>
+                            <td id="tableTimeDuration">-</td>
+                        </tr>
+    
+                        <tr>
+                            <th>Tickets</th>
+                            <th>Charges</th>
+                        </tr>
+    
+    
+    
+                    </table>
+                </div>
+    
+                <div class="" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="btn deactive-btn" id="continue-btn" onclick="submitData()">
+                        Continue with purchase
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="card-border">
-            <div class="card">
-                <span>summry</span>
-                <table border="1px" id="tableBody">
-
-                    <tr>
-                        <td>Date</td>
-                        <td id="tableDate">Not selected yet</td>
-                    </tr>
-
-                    <tr>
-                        <td>Time</td>
-                        <td id="tableTime">Not selected yet</td>
-                    </tr>
-
-                    <tr>
-                        <td>Duration</td>
-                        <td id="tableTimeDuration">-</td>
-                    </tr>
-
-                    <tr>
-                        <th>Tickets</th>
-                        <th>Charges</th>
-                    </tr>
-
-
-
-                </table>
-            </div>
-
-            <div class="" style="display: flex; justify-content: center; align-items: center;">
-                <div class="btn deactive-btn" id="continue-btn" onclick="submitData()">
-                    Continue with purchase
-                </div>
-            </div>
-        </div>
-
-
-
+    
     </div>
 
-    <div style="height: 4000px;"></div>
+
+    <footer>
+        <div>
+            <span>TURTLE SRI LANKA<br> </span>
+        </div>
+       <div class="text-right mt-2" style="margin-right: 20px;">
+          <p> Address: No. 25, Ahana Road, Hikkaduwa, Sri Lanka</p>
+       </div>
+       <div class="text-left mx-5">
+         <p> Get in touch with us: </p>
+         <p>  Contact us: 077-1234567  </p>
+         <p>   Email us: turtlesrilanka@gmail.com     </p><br>
+       </div>
+      <div>
+        <img src="images/logo.jpg" style="height: auto; width: 60pt;"> 
+      </div>
+  </footer>
+
+
     <script src="./js/navbar.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/tiketPage.js"></script>
     <script src="./js/constData.js"></script>
 </body>
+
 
 </html>
